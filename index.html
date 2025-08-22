@@ -4,6 +4,7 @@
 		<title>ClearCall AI</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
@@ -12,12 +13,14 @@
 		<!-- Sidebar -->
 			<section id="sidebar">
 				<div class="inner">
+					<!-- Logo -->
+        			<img src="images/ClearCallAI_logo.png" alt="ClearCallAI Logo" style="max-width:100%; height:auto; display:block; margin:0 auto 24px auto;">
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
 							<li><a href="#one">What we do</a></li>
 							<li><a href="#two">Our vision</a></li>
-							<li><a href="#three">Who we are</a></li>
+							<!--<li><a href="#three">Who we are</a></li>-->
 							<li><a href="#four">Get connected</a></li>
 						</ul>
 					</nav>
@@ -33,7 +36,7 @@
 							<h1>Network-native AI call protection.</h1>
 							<p>The next evolution of intelligence and protection for mobile networks.</p>
 							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Stay in the loop</a></li>
+								<li><a href="#one" class="button scrolly">Learn more</a></li>
 							</ul>
 						</div>
 					</section>
@@ -45,10 +48,10 @@
 							<div class="content">
 								<div class="inner">
 									<h2>What we're building</h2>
-									<p>A breakthrough mobile platform designed to put consumers, and their privacy, back in control of every call. A safer, smarter way to connect.</p>
-									<ul class="actions">
+									<p>A breakthrough mobile platform designed to put subscribers back in charge of their privacy, with an AI tool to validate the intent of every call. A safer, smarter way to connect.</p>
+									<!-- <ul class="actions">
 										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
+									</ul> -->
 								</div>
 							</div>
 						</section>
@@ -57,9 +60,9 @@
 							<div class="content">
 								<div class="inner">
 									<h2>Transform calling</h2>
-									<p>Restore trust in mobile calls.</p>
+									<p>Restoring trust in mobile calls.</p>
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
+										<li><a href="#four" class="button scrolly">Stay in the loop</a></li>
 									</ul>
 								</div>
 							</div>
@@ -110,9 +113,9 @@
 					</section>
 
 				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
+					<section id="four" class="wrapper style1 fade-up">
 						<div class="inner">
-							<h2>Get in touch</h2>
+							<h2>Stay in the loop</h2>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style1">
 								<section>
@@ -130,6 +133,12 @@
 												<label for="message">Message</label>
 												<textarea name="message" id="message" rows="5"></textarea>
 											</div>
+											<div class="field">
+												<label>
+													<input type="checkbox" name="keep_in_touch"	value="yes">
+													Keep me in the loop with your progress.
+												</label>
+											</div>
 										</div>
 										<ul class="actions">
 											<li><a href="" class="button submit">Send Message</a></li>
@@ -140,16 +149,43 @@
 									<ul class="contact">
 										<li>
 											<h3>Address</h3>
-											<span>Cape Town<br />
+											<span>Cape Town,<br />
 											South Africa</span>
 										</li>
 										<li>
 											<h3>Email</h3>
-											<a href="#">user@untitled.tld</a>
+											<a id="contact-email"></a>
+											<script>
+											const user = "hello";
+											const domain = "clearcallai.app";
+											document.getElementById("contact-email").innerHTML =
+												`<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+											</script>
 										</li>
 										<li>
 											<h3>Phone</h3>
-											<span>(000) 000-0000</span>
+											<!-- Call and WhatsApp Secure Links -->
+											<span id="call-link"></span><br>
+											<span id="wa-link"></span>
+											<script>
+											// Your number, international format, no spaces or symbols
+											const ccNumber = "27686409647";
+											const displayNumber = "+27 68 640 9647";
+											// Call Link (Phone Icon)
+											document.getElementById("call-link").innerHTML =
+												`<a href="tel:${ccNumber}" style="text-decoration:none">
+												<i class="fa-solid fa-phone" aria-hidden="true"></i>
+												<span class="visually-hidden">${displayNumber}</span>
+												</a>`;
+											// WhatsApp Link (WhatsApp Icon)
+											document.getElementById("wa-link").innerHTML =
+												`<a href="https://wa.me/${ccNumber}" target="_blank" rel="noopener" style="color:#25D366; text-decoration:none;">
+												<i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+												<span class="visually-hidden">${displayNumber}</span>
+												</a>`;
+											</script>
+
+
 										</li>
 										<li>
 											<h3>Social</h3>
