@@ -3016,7 +3016,7 @@ input, select, textarea {
 				-webkit-transition: opacity 1s ease;
 				-ms-transition: opacity 1s ease;
 				transition: opacity 1s ease;
-				background: rgba(49, 36, 80, 0.9);
+				background: rgba(110, 96, 84, 0.7);
 				content: '';
 				display: block;
 				height: 100%;
@@ -3875,7 +3875,7 @@ input, select, textarea {
 	}*/
 
 	#intro {
-		background-image: url('images/intro.svg'), url('images/Hero_image_2560x1440.jpg'); /* SVG on top, photo underneath */
+		background-image: url('images/intro.svg'), url('../../images/Hero_image_2560x1440.jpg'); /* SVG on top, photo underneath */
 		background-position: top right, center center;      /* Position SVG top right, photo centered */
 		background-repeat: no-repeat, no-repeat;            /* Don't tile either */
 		background-size: 100% 100%, cover;                  /* SVG stretches to fit, photo scales to cover */
