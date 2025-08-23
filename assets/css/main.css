@@ -110,7 +110,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: rgba(255, 255, 255, 0.55);
-		font-family: Arial, Helvetica, sans-serif;
+		font-family: 'Do Hyeon', Arial, Helvetica, sans-serif;
 		font-size: 16.5pt;
 		font-weight: normal;
 		line-height: 1.75;
@@ -3881,6 +3881,25 @@ input, select, textarea {
 		background-size: 100% 100%, cover;                  /* SVG stretches to fit, photo scales to cover */
 		background-attachment: fixed, fixed;                /* Both images fixed (parallax-style) */
 	}
+
+	#intro h1 {
+		color: #1A3F62;   
+	}
+
+	#intro p {
+		color: #1A3F62;
+	}
+
+	#intro .button {
+		background-color: #1A3F62;   /* Changes background to your requested color */
+		border: 4px solid #1A3F62;   /* Increases border thickness and color */
+		color: #fff;                 /* Makes text white (adjust or remove as you like) */
+	}
+
+	#intro .button:hover {
+		background-color: #255782;
+		border-color: #255782;
+	}	
 
 		#intro p {
 			font-size: 1.25em;
