@@ -92,7 +92,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #193147;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -191,10 +191,10 @@ input, select, textarea {
 		}
 
 			h1.major:after {
-				background-image: -moz-linear-gradient(to right, #5e42a6, #71EF80);
-				background-image: -webkit-linear-gradient(to right, #5e42a6, #71EF80);
-				background-image: -ms-linear-gradient(to right, #5e42a6, #71EF80);
-				background-image: linear-gradient(to right, #5e42a6, #71EF80);
+				background-image: -moz-linear-gradient(to right, #18753D, #71EF80);
+				background-image: -webkit-linear-gradient(to right, #18753D, #71EF80);
+				background-image: -ms-linear-gradient(to right, #18753D, #71EF80);
+				background-image: linear-gradient(to right, #18753D, #71EF80);
 				-moz-transition: max-width 0.2s ease;
 				-webkit-transition: max-width 0.2s ease;
 				-ms-transition: max-width 0.2s ease;
@@ -2530,7 +2530,7 @@ input, select, textarea {
 			}
 
 				.wrapper.style1 .icon.major:before {
-					color: #5e42a6;
+					color: #2563eb;
 				}
 
 				.wrapper.style1-alt .icon.major:before {
@@ -3230,11 +3230,11 @@ input, select, textarea {
 			}
 
 		.wrapper.alt {
-			background-color: #261c3e;
+			background-color: #152030;
 		}
 
 		.wrapper.style1 {
-			background-color: #255782;
+			background-color: #255782;	
 		}
 
 		.wrapper.style1-alt {
@@ -3246,7 +3246,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style2-alt {
-			background-color: #3e4094;
+			background-color: #1e293b;
 		}
 
 		.wrapper.style3 {
@@ -3254,7 +3254,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3-alt {
-			background-color: #953d75;
+			background-color: #9ABCF3;
 		}
 
 		.wrapper.fullscreen {
@@ -3364,7 +3364,7 @@ input, select, textarea {
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #5e42a6;
+		background-color: #2563eb;
 		cursor: default;
 		padding: 1.75em 2em;
 	}
@@ -3755,7 +3755,7 @@ input, select, textarea {
 			}
 
 			#sidebar nav a:before {
-				background: #123d26;
+				background: #255782;
 			}
 
 			#sidebar nav a:after {
@@ -3866,12 +3866,20 @@ input, select, textarea {
 
 /* Intro */
 
-	#intro {
+	/*#intro {
 		background-attachment: fixed;
 		background-image: url("images/intro.svg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: 100% 100%;
+	}*/
+
+	#intro {
+		background-image: url('images/intro.svg'), url('images/Hero_image_2560x1440.jpg'); /* SVG on top, photo underneath */
+		background-position: top right, center center;      /* Position SVG top right, photo centered */
+		background-repeat: no-repeat, no-repeat;            /* Don't tile either */
+		background-size: 100% 100%, cover;                  /* SVG stretches to fit, photo scales to cover */
+		background-attachment: fixed, fixed;                /* Both images fixed (parallax-style) */
 	}
 
 		#intro p {
