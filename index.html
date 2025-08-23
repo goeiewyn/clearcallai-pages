@@ -14,7 +14,7 @@
 			<section id="sidebar">
 				<div class="inner">
 					<!-- Logo -->
-        			<img src="images/ClearCallAI_logo.png" alt="ClearCallAI Logo" style="max-width:100%; height:auto; display:block; margin:0 auto 24px auto;">
+        			<img src="images/ClearCallAI_vertical_logo_390x275.png" alt="ClearCallAI Logo" style="max-width:100%; height:auto; display:block; margin:0 auto 24px auto;">
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
@@ -33,7 +33,7 @@
 				<!-- Intro -->
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
-							<h1>Network-native AI call protection.</h1>
+							<h1>Network-native <span style="color:#71EF80;">AI</span> call protection.</h1>
 							<p>The next evolution of intelligence and protection for mobile networks.</p>
 							<ul class="actions">
 								<li><a href="#one" class="button scrolly">Learn more</a></li>
@@ -118,7 +118,7 @@
 							<p>Send us a message and if you’d like to be kept in the loop about our progress, just tick the box!</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+									<form id="contactForm" method="post" action="https://formspree.io/f/xeozywbp">
 										<div class="fields">
 											<div class="field half">
 												<label for="name">Name</label>
@@ -141,6 +141,11 @@
 											<li><a href="" class="button submit">Send Message</a></li>
 										</ul>
 									</form>
+									<div id="thankYouMessage" style="display:none; position:fixed; top:40%; left:50%; transform:translate(-50%, -50%);
+										background:#222; color:#fff; padding:2em; border-radius:6px; z-index:100;">
+										<p>Message sent!</p>
+										<button onclick="document.getElementById('thankYouMessage').style.display='none'">Close</button>
+									</div>
 								</section>
 								<section>
 									<ul class="contact">
@@ -219,6 +224,35 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				document.getElementById('contactForm').addEventListener('submit', async function(e) {
+				e.preventDefault(); // Don’t redirect
+
+				// Optionally: Disable submit button
+				const btn = this.querySelector('button[type="submit"]');
+				btn.disabled = true;
+
+				// Collect data
+				const formData = new FormData(this);
+
+				// Submit via AJAX to Formspree
+				const response = await fetch(this.action, {
+					method: 'POST',
+					body: formData,
+					headers: { 'Accept': 'application/json' }
+				});
+
+				if (response.ok) {
+					// Show thank you message
+					document.getElementById('thankYouMessage').style.display = 'block';
+					this.reset();
+				} else {
+					// Optionally: Show error message
+					alert('There was a problem sending your message. Try again!');
+				}
+				btn.disabled = false;
+				});
+			</script>
 
 	</body>
 </html>
