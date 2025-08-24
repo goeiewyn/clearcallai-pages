@@ -3885,12 +3885,19 @@ input, select, textarea {
 
 	#intro h1 {
 		color: #1A3F62;
+		text-shadow:
+			0 2px 0 rgba(255, 255, 255, 0.1),
+			0 0 18px rgba(255, 255, 255, 0.15);
 	}
 
 	#intro p {
 		color: #1A3F62;
 		font-size: 1.4em;
+		text-shadow:
+			0 2px 0 rgba(255, 255, 255, 0.3),
+			0 0 14px rgba(255, 255, 255, 0.15);
 	}
+
 
 	#intro .button {
 		background-color: #71EF80;   /* Changes background to your requested color */
@@ -3900,9 +3907,19 @@ input, select, textarea {
 		padding: 0 2.5em;
 	}
 
-	#intro .actions {
- 		margin-left: 16vw; /* Moves the entire actions list 30% of viewport width from the left */
-	}
+
+	/* Make the Intro "Learn more" button a bit shorter */
+		#intro .actions .button {
+			margin-left: 20vw;
+			height: calc(3.75em + 2px);
+			/* was 4.75em */
+			line-height: 3.75em;
+			/* match line-height to height */
+			padding: 0 3.25em;
+			/* optional: slightly narrower */
+			font-size: 0.6em;
+			/* keep existing scaling; adjust if desired */
+		}
 
 	#intro .button:hover {
 		background-color: #6cca77;
@@ -3933,3 +3950,29 @@ input, select, textarea {
 
 		}
 		
+/* Mailchimp embed alignment with your theme */
+.mc-embed .fields .field label {
+  color: #ffffff; /* your site text color */
+  font-weight: bold;
+}
+
+.mc-embed .fields .field input[type="text"],
+.mc-embed .fields .field input[type="email"],
+.mc-embed .fields .field textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 0.25em;
+}
+
+.mc-embed .button.submit {
+  background: #fff;
+  color: #1A3F62;   /* your dark blue */
+  border: 3px solid #1A3F62;
+}
+
+.mc-embed .button.submit:hover {
+  background: #255782;
+  color: #fff;
+  border-color: #255782;
+}
