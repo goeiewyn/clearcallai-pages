@@ -32,17 +32,17 @@
 
 	// Forms.
 
-		// Hack: Activate non-input submits.
-			$('form').on('click', '.submit', function(event) {
+		// // Hack: Activate non-input submits.
+		// 	$('form').on('click', '.submit', function(event) {
 
-				// Stop propagation, default.
-					event.stopPropagation();
-					event.preventDefault();
+		// 		// Stop propagation, default.
+		// 			event.stopPropagation();
+		// 			event.preventDefault();
 
-				// Submit form.
-					$(this).parents('form').submit();
+		// 		// Submit form.
+		// 			$(this).parents('form').submit();
 
-			});
+		// 	});
 
 	// Sidebar.
 		if ($sidebar.length > 0) {
@@ -188,3 +188,40 @@
 			});
 
 })(jQuery);
+
+// // Add this code to your main.js file
+// window.addEventListener('load', function() {
+//     const contactForm = document.getElementById('mc-embedded-subscribe-form');
+//     if (contactForm) {
+//         contactForm.addEventListener('submit', async function(e) {
+//             e.preventDefault(); // This is the key line to prevent redirection
+
+//             const form = this;
+//             const data = new FormData(form);
+//             const btn = form.querySelector('button[type="submit"]');
+//             btn.disabled = true;
+
+//             try {
+//                 const response = await fetch(form.action, {
+//                     method: 'POST',
+//                     body: data,
+//                     headers: {
+//                         'Accept': 'application/json'
+//                     }
+//                 });
+
+//                 if (response.ok) {
+//                     form.reset();
+//                     document.getElementById('thankYouMessage').style.display = 'block';
+//                 } else {
+//                     alert("There was a problem sending your form. Please try again.");
+//                 }
+//             } catch (error) {
+//                 console.error('Error submitting the form:', error);
+//                 alert("An error occurred. Please check your network connection and try again.");
+//             } finally {
+//                 btn.disabled = false;
+//             }
+//         });
+//     }
+// });
