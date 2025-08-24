@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Thank You - ClearCall AI</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" /> <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
+    <meta http-equiv="refresh" content="5; url=/" />
+    <style>
+        /* Minimal additional centering/layout tweaks */
+        .fullcenter {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: #193147;
+        }
+
+        .card {
+            max-width: 720px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem 2rem;
+        }
+
+        .card h1 {
+            margin: 0 0 0.5em 0;
+            font-size: 2.25rem;
+            color: #fff;
+        }
+
+        .card p {
+            margin: 0 0 1.5rem 0;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .card .muted {
+            font-size: 0.95rem;
+            opacity: 0.75;
+        }
+
+        .actions {
+            margin-top: 1.5rem;
+        }
+
+        .actions .button {
+            border-color: rgba(255, 255, 255, 0.35) !important;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <div class="fullcenter">
+        <div class="card">
+            <h1>Thanks for connecting</h1>
+            <p>We look forward to keep you in the loop with meaningful updates.</p>
+            <p class="muted">Redirecting to the homepage in 5 seconds…</p>
+            <ul class="actions" style="display:flex; justify-content:center;">
+                <li><a href="/" class="button">Return home</a></li>
+            </ul>
+        </div>
+    </div>
+    text
+<script>
+  // Fallback JS redirect (in case meta refresh is blocked)
+  setTimeout(function(){ window.location.href = '/'; }, 5000);
+  // Remove preload class after load (match theme behavior)
+  window.addEventListener('load', function () {
+    document.body.classList.remove('is-preload');
+  });
+</script>
+</body> </html>
